@@ -1,8 +1,8 @@
 :root {
   --color-lightest: white;
-  --color-mid500: gray;
+  --color-mid500: lightgray;
   --color-darkest: black;
-  --color-accent: #ff5900;
+  --color-accent: #5078f5;
   --container-width: 80em;
   --base-font-size: 16px;
   --font-scale-ratio: 1.25;
@@ -51,7 +51,8 @@ body {
 h1,
 h2,
 h3,
-label {
+label,
+.logo {
   font-weight: 600;
   line-height: 125%;
   letter-spacing: calc(var(--paragraph-font-size) * 0.03);
@@ -65,7 +66,8 @@ h2 {
   font-size: calc(var(--paragraph-font-size) * pow(var(--font-scale-ratio), 2));
 }
 
-h3 {
+h3,
+.logo {
   font-size: calc(var(--paragraph-font-size) * pow(var(--font-scale-ratio), 1));
 }
 
@@ -120,8 +122,29 @@ section {
   gap: var(--spacing-housemates);
 }
 
-.container.post {
-  width: calc(var(--container-width) * 0.75);
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-siblings) var(--spacing-friends);
+}
+
+header ul {
+  display: flex;
+  gap: var(--spacing-siblings);
+  list-style: none;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-housemates) var(--spacing-friends);
+  background-color: var(--color-mid500);
+  color: var(--color-darkest);
 }
 
 .component {
@@ -135,6 +158,11 @@ section {
 #usp .wrapper,
 #usp .image-container {
   grid-column: span 6;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
 }
 
 .card {
@@ -167,8 +195,8 @@ section {
   border: 1px solid var(--color-mid500);
 }
 
-#contact-form .banner {
-  grid-column: 4 / span 6;
+#contact .banner {
+  grid-column: 3 / span 8;
 }
 
 .title {
@@ -221,11 +249,6 @@ button,
   width: 100%;
 }
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-}
-
 @media screen and (max-width: 1280px) {
   :root {
     --paragraph-font-size: 1rem;
@@ -238,24 +261,16 @@ button,
   :root {
     --container-width: 40em;
   }
-
+  .container.post {
+    width: var(--container-width);
+  }
   .component {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  .container.post {
-    width: var(--container-width);
-  }
-  #reviews .card {
-    grid-column: span 6;
-  }
-
-  #prices .card {
-    grid-column: span 3;
-  }
-  #contact-form .banner,
-  #usp .wrapper,
-  #usp .image-container {
+  #reviews .card,
+  #prices .card,
+  #contact .banner {
     grid-column: 2 / span 4;
   }
 }
@@ -275,11 +290,12 @@ button,
   .component {
     grid-template-columns: repeat(4, 1fr);
   }
+
   #usp .wrapper,
   #usp .image-container,
   #reviews .card,
   #prices .card,
-  #contact-form .banner {
+  #contact .banner {
     grid-column: span 4;
   }
 }

@@ -4,92 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Website Template Landing Page</title>
+    <title>Blue Ballpoint Pen - Best Writing Experience</title>
   </head>
   <body>
-    <!-- Unique Selling Proposition -->
+    <header>
+      <nav>
+        <div class="logo">BluePen</div>
+        <ul>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <section id="usp">
       <div class="container">
         <div class="component">
           <div class="wrapper">
-            <h1>Why Choose Our Website Template?</h1>
-            <p>
-              Our website template is designed to offer flexibility, speed, and
-              a user-friendly experience for all your web design needs.
-            </p>
-            <ul>
-              <li>Easy to customize with minimal effort</li>
-              <li>Responsive design for all devices</li>
-              <li>SEO-friendly and performance-optimized</li>
-            </ul>
-            <button>Get Started</button>
+            <div class="molecule vertical">
+              <h1>The Best Blue Ballpoint Pen for Smooth Writing</h1>
+              <p>
+                Experience effortless writing with our premium blue ballpoint
+                pen, designed for comfort and precision.
+              </p>
+              <ul>
+                <li>Smooth ink flow with no smudging</li>
+                <li>Ergonomic grip for long writing sessions</li>
+                <li>Durable and reliable for everyday use</li>
+              </ul>
+            </div>
+            <a class="button" href="#contact">Leave request</a>
           </div>
           <div class="image-container">
-            <img src="hero.webp" width="642" height="642" />
+            <img src="product.webp" alt="Blue Ballpoint Pen" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Reviews -->
     <section id="reviews">
       <div class="container">
-        <h2>What Our Users Say</h2>
+        <div class="title">
+          <h2>What Our Customers Say</h2>
+        </div>
         <div class="component">
           <div class="card">
-            <blockquote>
-              "This template made building my website so much easier. Highly
-              recommended!"
-            </blockquote>
-            <address>Kiera C</address>
+            <p>"This pen writes so smoothly, it's a pleasure to use!"</p>
+            <p><strong>Alex D.</strong></p>
           </div>
           <div class="card">
-            <blockquote>
-              "Clean design and great performance. Exactly what I needed for my
-              business site."
-            </blockquote>
-            <address>Mark C</address>
+            <p>"No smudging, no skipping – just perfect!"</p>
+            <p><strong>Maria S.</strong></p>
           </div>
           <div class="card">
-            <blockquote>
-              "Easy to use and customizable. I’m very happy with the results!" –
-            </blockquote>
-            <address>Conan M</address>
+            <p>"Highly recommend for anyone who writes a lot."</p>
+            <p><strong>John P.</strong></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Prices -->
     <section id="prices">
       <div class="container">
-        <h2>Pricing Options</h2>
+        <h2>Choose Your Package</h2>
         <div class="component">
           <div class="card">
-            <h3>Free Plan</h3>
-            <p>Basic website template with essential features.</p>
+            <p>1 Box (12 Pens)</p>
+            <p><strong>$9.99</strong></p>
           </div>
           <div class="card">
-            <h3>Premium Plan</h3>
-            <p>
-              Full access to all features, including premium support and
-              advanced customization options.
-            </p>
+            <p>24 Boxes (288 Pens)</p>
+            <p><strong>$199.99</strong></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Form -->
-    <section id="contact-form">
+    <section id="contact">
       <div class="container">
         <div class="component">
           <form
             class="banner"
-            action="https://formspree.io/f/xeoevbbo"
             method="POST"
+            action="https://formspree.io/f/xeoevbbo"
           >
-            <h2>Stay Updated</h2>
+            <h2>Contact Us</h2>
             <div class="molecule vertical">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
@@ -98,10 +98,17 @@
               <label for="email">Email:</label>
               <input type="email" id="email" name="email" required />
             </div>
-            <button type="submit">Sign Up</button>
+            <div class="molecule vertical">
+              <button type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="logo">BluePen</div>
+      <p>&copy; 2025 BluePen. All rights reserved.</p>
+    </footer>
   </body>
 </html>
