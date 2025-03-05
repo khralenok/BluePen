@@ -1,6 +1,6 @@
 :root {
   --color-lightest: white;
-  --color-mid500: lightgray;
+  --color-mid: lightgray;
   --color-darkest: black;
   --color-accent: #5078f5;
   --container-width: 80em;
@@ -58,7 +58,8 @@ label,
   letter-spacing: calc(var(--paragraph-font-size) * 0.03);
 }
 
-h1 {
+h1,
+.price {
   font-size: calc(var(--paragraph-font-size) * pow(var(--font-scale-ratio), 3));
 }
 
@@ -81,9 +82,11 @@ label {
   line-height: 135%;
 }
 
-input {
+input,
+select {
   font-size: calc(var(--paragraph-font-size) * 0.8);
   line-height: 135%;
+  border: 1px solid var(--color-mid);
 }
 
 a:link,
@@ -141,9 +144,9 @@ header a {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: var(--spacing-housemates) var(--spacing-friends);
-  background-color: var(--color-mid500);
+  background-color: var(--color-mid);
   color: var(--color-darkest);
 }
 
@@ -174,15 +177,12 @@ footer {
   gap: var(--spacing-friends);
   padding: var(--spacing-friends);
   border-radius: var(--spacing-friends);
-  border: 1px solid var(--color-mid500);
+  border: 1px solid var(--color-mid);
 }
 
-#reviews .card {
-  grid-column: span 4;
-}
-
+#reviews .card,
 #prices .card {
-  grid-column: span 6;
+  grid-column: span 4;
 }
 
 .banner {
@@ -192,7 +192,7 @@ footer {
   gap: var(--spacing-friends);
   padding: var(--spacing-friends);
   border-radius: var(--spacing-friends);
-  border: 1px solid var(--color-mid500);
+  border: 1px solid var(--color-mid);
 }
 
 #contact .banner {
@@ -266,6 +266,26 @@ button,
   }
   .component {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  #usp .wrapper {
+    align-items: center;
+    text-align: center;
+  }
+  #usp ul {
+    padding-left: 0;
+  }
+  #usp li {
+    list-style: none;
+  }
+  #usp li::after {
+    display: block;
+    content: "•";
+    color: var(--color-mid);
+  }
+  #usp ul li:last-child::after {
+    content: "";
+    display: inline;
   }
 
   #reviews .card,
